@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI Components</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <main>
       <article class="cards">
         <section class="card offer">
           <div class="profile">
-            <img src="" alt="image profile" />
+            <img src="./images/profile.png" alt="image profile" />
             <div class="info-profile">
               <h2>Joseph Anderson</h2>
               <p>Posted 2h ago</p>
             </div>
-            <button>O</button>
+            <button class="like"><i class="bi bi-heart-fill"></i></button>
           </div>
           <div class="detail">
-            <p>
+            <h3>
               Looking for SM manager to create posts across various platforms
-            </p>
-            <small>We're seeking a skilled Social Media Manager to...</small>
+            </h3>
+            <p>We're seeking a skilled Social Media Manager to...</p>
             <div class="tags">
               <p class="tag">SMM</p>
               <p class="tag">Growth Strategy</p>
@@ -35,7 +39,9 @@
             <h3>$150 - $200/h</h3>
             <p>Hourly rate • 100% Remote</p>
           </div>
-          <button>Apply</button>
+          <button class="btn-apply">
+            <i class="bi bi-lightning-charge-fill"></i> Apply
+          </button>
         </section>
         <section class="card stats"></section>
         <section class="card clients"></section>
