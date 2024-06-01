@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --bg-main: #dedede;
+  --bg-like: #f7f7f7;
+  --bg-tag: #dce1fc;
+
+  --b-like: #e5e5e5;
+  --text-sec: #9c9c9c;
+  --sw-card: 0px 1px 5px 0px rgba(0, 0, 0, 0.24);
+
+  --size-img: 55px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +22,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #dedede;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--bg-main);
 }
 .cards {
   display: grid;
@@ -22,21 +34,21 @@ main {
 }
 
 .card {
+  height: 400px;
   width: 370px;
   background-color: white;
   border-radius: 30px;
-  height: 400px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.24);
-  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--sw-card);
+  -webkit-box-shadow: var(--sw-card);
+  -moz-box-shadow: var(--sw-card);
   padding: 15px 18px;
 }
 .stats {
   height: 440px;
 }
 
-.offer{
-    height: auto;
+.offer {
+  height: auto;
 }
 .offer .profile {
   display: flex;
@@ -45,8 +57,8 @@ main {
   position: relative;
 }
 .offer .profile img {
-  height: 55px;
-  width: 55px;
+  height: var(--size-img);
+  width: var(--size-img);
   border-radius: 50%;
 }
 .offer .profile .info-profile {
@@ -60,14 +72,14 @@ main {
 .offer .profile .info-profile p {
   font-size: 13px;
   padding-top: 4px;
-  color: #9C9C9C;
+  color: var(--text-sec);
 }
 .offer .profile .like {
-  background-color: #f7f7f7;
+  background-color: var(--bg-like);
   padding: 10px 10px 7px;
   font-size: 17px;
   border-radius: 7px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--b-like);
   position: absolute;
   right: 0;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.21);
@@ -80,17 +92,16 @@ main {
 
 .offer .detail {
   padding: 20px 0;
-  border-bottom: 2px dashed #e5e5e5;
+  border-bottom: 2px dashed var(--b-like);
 }
 
 .offer .detail h3 {
-    font-size: 20px;
-    font-weight: 500;
-
+  font-size: 20px;
+  font-weight: 500;
 }
 .offer .detail p {
-    font-size: 15px;
-  color: #9C9C9C;
+  font-size: 15px;
+  color: var(--text-sec);
   padding: 8px 0 5px;
 }
 .offer .detail .tags {
@@ -100,7 +111,7 @@ main {
 }
 .offer .detail .tags .tag {
   margin-right: 5px;
-  background-color: #dce1fc;
+  background-color: var(--bg-tag);
   color: black;
   padding: 4px 8px;
   border-radius: 6px;
@@ -119,12 +130,12 @@ main {
 .offer .price p {
   font-size: 13.5px;
   padding: 7px 0 9px;
-  color: #9C9C9C;
+  color: var(--text-sec);
 }
 
 .offer .btn-apply {
   width: 100%;
-  height: 60px;
+  height: 65px;
   border-radius: 15px;
   font-size: 20px;
   background-image: linear-gradient(
@@ -140,8 +151,4 @@ main {
 }
 .offer .btn-apply:hover {
   cursor: pointer;
-}
-.offer .btn-apply i {
-  transform: rotate(-10deg);
-  transform-origin: 100% 50%;
 }
